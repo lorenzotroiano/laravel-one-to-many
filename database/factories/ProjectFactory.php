@@ -21,7 +21,6 @@ class ProjectFactory extends Factory
             'publish_date' => fake()->date(),
             'description' => fake()->paragraph(),
             'accessibility' => fake()->boolean(),
-
         ];
     }
 }
