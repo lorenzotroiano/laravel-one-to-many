@@ -9,14 +9,12 @@
             {{ $projects->description }}
         </p>
 
-        <ul>
-            @foreach ($projects->type as $type)
-                <li>
-                    <a>
-                        {{ $type->type_name }}
-                    </a>
-                </li>
-            @endforeach
-        </ul>
+
+
+        <a class="bg-warning">
+            {{ $projects->type->type_name }}
+        </a>
+
+
     </div>
 @endsection
