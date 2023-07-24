@@ -9,10 +9,14 @@
             {{ $projects->description }}
         </p>
 
-        @foreach ($projects->type as $type)
-            <span class="bg-warning">
-                {{ $type->type_name }}
-            </span>
-        @endforeach
+        <ul>
+            @foreach ($projects->type as $type)
+                <li>
+                    <a>
+                        {{ $type->type_name }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
     </div>
 @endsection

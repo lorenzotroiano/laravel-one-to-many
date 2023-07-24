@@ -13,11 +13,12 @@ class Project extends Model
         'title',
         'publish_date',
         'description',
-        'accessibility'
+        'accessibility',
+        'type_id'
     ];
 
     public function type()
     {
-        return $this->hasMany(Type::class);
+        return $this->belongsTo(Type::class);
     }
 }
