@@ -15,4 +15,9 @@ class Project extends Model
         'description',
         'accessibility'
     ];
+
+    public function type()
+    {
+        return $this->hasMany(Type::class);
+    }
 }
