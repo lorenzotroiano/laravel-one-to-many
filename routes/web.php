@@ -8,6 +8,13 @@ use App\Http\Controllers\Admin\ProjectController;
 
 Route::get('/', [ProjectController::class, 'index'])->name('welcome');
 
+Route::get('/create', [ProjectController::class, 'create'])
+    ->middleware(['auth'])
+    ->name('project.create');
+Route::post('/store', [ProjectController::class, 'store'])
+    ->middleware(['auth'])
+    ->name('project.store');
+
 Route::get('/show/{id}', [ProjectController::class, 'show'])->middleware(['auth'])->name('project.show');
 
 // ->middleware(['auth', 'verified'])

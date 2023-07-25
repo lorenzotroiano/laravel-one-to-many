@@ -11,9 +11,9 @@
 
 
 
-        <a class="bg-warning">
+        <span class="bg-warning"> Type:
             {{ $projects->type->type_name }}
-        </a>
+        </span>
 
 
     </div>
